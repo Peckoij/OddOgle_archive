@@ -1,0 +1,204 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// OddOgle purple:
+// #3c2a70;
+.content {
+  background-color: #f8f1f8;
+  //  background-color: #e7d5d8;
+}
+
+button ion-icon {
+  color: #ffffff; //#f8f1f8;
+}
+
+.toolbar-title {
+  font-family: FredokaOne;
+  margin: auto;
+  color: #ffffff; //#f8f1f8;
+  font-size: 200%;
+}
+
+.menubuttons {
+  background-color: #ffffff; //#f8f1f8;
+}
+
+.item-md {
+  background-color:#f8f1f8;
+}
+
+.menulist {
+  margin: 10% 5% 8% 5%;
+}
+
+.menuitem {
+  padding: 1em 0em 1em 0em;
+}
+
+.label {
+  font-family: FredokaOne;
+  margin: auto;
+  color: #3c2a70;
+  font-size: 150%;
+}
+
+#nappula {
+  background-color: #3c2a70;
+  color: #ffffff; //#f8f1f8;
+  font-family: FredokaOne;
+  width: 100%;
+  font-size: 2em;
+  margin-top: 10%;
+  padding: 0.2em;
+}
+
+#nappulaLogout {
+  position: absolute;
+  background-color: #3c2a70;
+  color: #ffffff; //#f8f1f8;
+  font-family: FredokaOne;
+  width: 90%;
+  font-size: 2em;
+  bottom: 0.2em;
+  padding: 0.2em;
+}
+
+.scroll-content {
+  background-color: #f8f1f8;
+}
+
+.alert-head {
+  background: linear-gradient(#3c2a70, #6A539F);
+  color: #fdfbfd;
+}
+
+.alert-md .alert-message {
+  padding-top: 1em;
+  color: rgba(0, 0, 0, 1);
+}
+
+.alert-md .alert-button {
+  background: transparent; // linear-gradient(#6A539F, #3c2a70);
+  //  color: #fdfbfd;
+  padding: 0.5em;
+  margin: 0.2em;
+}
+
+// poistaa oudon yhden pikselin borderin list itemien alta
+.list-md .item-block .item-inner {
+  border-bottom: 0px;
+}
+
+#logoTopNav {
+  //oddogle logon sijoittelu ja muokkaus ylapalkissa
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 80%;
+  top: 10%;
+  //  right: calc(50% - 108px);
+}
+
+.toolbar-background {
+  // background-color: #F6EBF5;
+  background: linear-gradient(#3c2a70, #6A539F);
+}
+
+.bottomNav {
+  display: flex;
+  bottom: 0px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(#6A539F, #3c2a70);
+}
+
+.bNavIcon {
+  color: #fdfbfd;
+  font-size: 35px;
+  margin: auto;
+  width: 30%;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.commentPopover {
+  position: fixed;
+  width: 100%;
+  top: -25%;
+  overflow: hidden;
+  height: 150%;
+}
+
+.opaq {
+  // luokka nappien yms harmaannuttamiseksi jotta selvempi ettei käytössä
+  opacity: .5;
+}
+
+@font-face {
+  font-family: magnetoBold;
+  src: url('../assets/fonts/MAGNETOB.ttf');
+  src: url('../assets/fonts/MAGNETOB.eot?') format('eot'), url('../assets/fonts/MAGNETOB.woff') format('woff'), url('../assets/fonts/MAGNETOB.woff2') format('woff2'), url('../assets/fonts/MAGNETOB.ttf') format('truetype'); //  url('../assets/fonts/MAGNETOB.svg#{$regular}') format('svg');
+}
+
+@font-face {
+  font-family: Oxygen-Sans-Oblique;
+  src: url('../assets/fonts/Oxygen-Sans-Book-Oblique.otf');
+}
+
+@font-face {
+  font-family: rocksalt;
+  src: url('../assets/fonts/RockSalt-Regular.ttf');
+}
+
+@font-face {
+  font-family: WalterTurncoat;
+  src: url('../assets/fonts/WalterTurncoat-Regular.ttf');
+}
+
+@font-face {
+  font-family: iceland;
+  src: url('../assets/fonts/Iceland-Regular.ttf');
+}
+
+@font-face {
+  font-family: shareTechMono;
+  src: url('../assets/fonts/ShareTechMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: JosefinSlab-SemiBold;
+  src: url('../assets/fonts/JosefinSlab-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Oxygen-BoldItalic;
+  src: url('../assets/fonts/Oxygen-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: FredokaOne;
+  src: url('../assets/fonts/FredokaOne-Regular.ttf');
+}
+
+* {
+  font-family: Oxygen-Sans-Oblique; //color: #F6EBF5;
+} // remove all scrollbars
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,35 @@
+page-comment-form {
+    .comment-popover .popover-content{
+        position: absolute;
+        width: 80%;
+        background-color: transparent;
+    }
+
+    .popover-content{
+        top:0px;
+    }
+    
+    .validation-errors{
+        color: red;
+    }
+    .float_right {
+        float: right;
+    }
+    .float_left {
+        float: left;
+    }
+    .popover{
+        overflow: scroll;
+    }
+    
+    .signup-popover #pic-heading1 {
+        background-color: #3c2a70;
+        padding: 12px;
+        margin: 0px;
+        color: #F6EBF5;
+    }
+    .toolbar-background{
+        background-color: #3c2a70;
+    }
+
+}

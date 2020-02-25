@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "323555438273",
+    "firebase_url": "https://oddogle-app.firebaseio.com",
+    "project_id": "oddogle-app",
+    "storage_bucket": "oddogle-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323555438273:android:5f3c87242de81b76",
+        "android_client_info": {
+          "package_name": "com.oddogle.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323555438273-0qghpgmigqb3lbm51a51etv1j57i98ub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oddogle.app",
+            "certificate_hash": "82807d7aa6a1ce6ac1e04a7ee9b877ccad8fd865"
+          }
+        },
+        {
+          "client_id": "323555438273-j88ji4bu9cuuoaifrum2a421efmaepu7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oddogle.app",
+            "certificate_hash": "a86388f7341c4894fb8fcb4915aa5e41cd98bd72"
+          }
+        },
+        {
+          "client_id": "323555438273-fs3e78olq06kjieur4jlrult14411f3j.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "323555438273-s6v7hjv7nn260sraj2d8vi5lesqhjen6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "323555438273-j8lr585ic9hsvf372mehaf78gqm1brtp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oddogle.app",
+            "certificate_hash": "a0c65aa706ca1a028b6e00afb49f3f668a42fe02"
+          }
+        },
+        {
+          "client_id": "323555438273-c0ilkmmbe3ujl1a1t8ebo32052tabc1b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oddogle.app",
+            "certificate_hash": "6e344efc7932c5f71eb6fd28df235ce54971ae41"
+          }
+        },
+        {
+          "client_id": "323555438273-8heqt6ub7uvbkap21pv7u3bgjjo73jof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oddogle.app",
+            "certificate_hash": "8fc00491a23d592ce3f9f1940ed31dbefdcb718a"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMVRCFWxZsT_rEgKm7V1KVy5GLkqmLm6E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323555438273-3dgdeg38v6ggaecc4bgpb6upcs31g6o0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.oddogle.app"
+              }
+            },
+            {
+              "client_id": "323555438273-fs3e78olq06kjieur4jlrult14411f3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

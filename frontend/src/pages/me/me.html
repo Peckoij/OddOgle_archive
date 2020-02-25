@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-navbar>
+    <!-- <img id="logoTopNav" src="assets/img/oddogle_small_logo_4-6.png" /> -->
+    <img id="logoTopNav" src="assets/img/Logo-2.png" />
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="sections" padding>
+    <ion-segment [(ngModel)]="sections">
+
+      <ion-segment-button value="Profile">
+        Profile
+      </ion-segment-button>
+      <ion-segment-button value="Feedback">
+        Feedback
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <!-- segmentit ryhmitelty ngSwitchillä -->
+
+
+  <div [ngSwitch]="sections">
+    <!-- <- POISTA      
+    <ion-list class="profilePage" *ngSwitchDefault>
+        <h1>Coming soon!</h1>
+        <ion-item text-wrap>
+          <div id="message">
+              We currently developing some awesome features for you.
+          </div>
+          <div id="construction">
+              <img src="assets/img/UnderConstruction.png" />
+          </div>
+        </ion-item>
+      </ion-list>
+  POISTA -> -->
+
+    <ion-list class="profilePage" *ngSwitchDefault>
+      <ion-item>
+        <div class="avatar">
+          <img class="avatarPic" src="assets/avatars_round/{{user.localUser.data.ActivityStatus}}">
+        </div>
+        <div id="level">
+          <div id="levelNumber">
+            {{user.localUser.data.level}}
+          </div>
+          <div id="lvl">LVL</div>
+        </div>
+        <div class="xp-bar" *ngIf="user">
+          <div class="xp" [ngStyle]="xpPercent()"></div>
+        </div>
+        <div class="xpToNextLevel" *ngIf="user">
+          xp to next level: {{xpToNextLvl}}
+        </div>
+      </ion-item>
+      <!--
+      <ion-item>
+        <div class="bucks" *ngIf="user.localUser">
+          <h2 id="bucksH2"> Oddbucks:</h2> <h1 id="usersBucks">{{user.localUser.data.oddBucksBalance}}</h1>
+          <img class="oddBucks" src="assets/oddbucks/symbol.png">
+        </div>
+      </ion-item> -->
+
+      <ion-item>
+        <h2 class="statsTitle">Stats:</h2>
+      </ion-item>
+
+      <ion-item>
+        <h3 class="stats">Total score: {{user.localUser.data.points}}</h3>
+      </ion-item>
+
+      <ion-item>
+        <h3 class="stats">Posted pics: {{user.localUser.data.picCount}}</h3>
+      </ion-item>
+
+      <ion-item>
+        <h3 class="stats">Comments written: {{user.localUser.data.commentCount}}</h3>
+      </ion-item>
+
+      <ion-item>
+        <h3 class="stats">Longest comment: {{user.localUser.data.longestComment}}</h3>
+      </ion-item>
+
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'Feedback'">
+      <ion-item class="content">
+        <ion-item [(ngModel)]="sendFeedback" id="Feedbacktext">
+          <ion-textarea rows="10" placeholder="Give us some feedback!" maxLength="500"></ion-textarea>
+
+        </ion-item>
+        <button (click)="popFeedback();" id="pic-button1" ion-button color="stable" block>
+          Send feedback
+        </button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<div class="bottomNav">
+  <ion-icon class="bNavIcon" name="images" (click)="pushPage('feedi')"></ion-icon>
+  <ion-icon class="bNavIcon" name="camera" (click)="pushPage('camera')"></ion-icon>
+  <ion-icon class="bNavIcon" name="person"></ion-icon>
+</div>

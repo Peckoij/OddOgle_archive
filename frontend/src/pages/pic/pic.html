@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-navbar>
+      <img id="logoTopNav" src="assets/img/Logo-2.png"/>
+  </ion-navbar>
+</ion-header>
+<ion-content class="pagecontent" *ngIf="loaded" padding id="page3">
+    <ion-card no-border no-shadow id="paddingCardTop"></ion-card>
+  <div (swipe)="swipeEvent($event)">
+      
+    <div id="topPadding"> 
+      <img src={{this.pictures.pictureList[curIndex].name}} style="top:60px;display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;"
+      />
+      <ion-icon class="reportButton" name="ios-alert-outline" (click)="showReportAlert()"></ion-icon>
+    </div>
+
+    <div class="headeri">
+     <div *ngIf="this.pictures.pictureList[curIndex].ActivityStatus==null">
+       <img id="picPosterAvatar" src="assets/avatars_round/Guide.png"> 
+      </div> 
+      <div *ngIf="this.pictures.pictureList[curIndex].ActivityStatus!=null">
+        <img id="picPosterAvatar" src="assets/avatars_round/{{this.pictures.pictureList[curIndex].ActivityStatus}}"> 
+      </div> 
+      <div id="title"> {{this.pictures.pictureList[curIndex].title}} </div>
+      <div>
+        <!-- <div id="floatR"> -->
+        <div *ngIf="loaded  && !this.pictures.pictureList[curIndex].hasVotedDown">
+          <ion-icon (click)="votePicture('down')" id="voteDown" name="ios-arrow-down-outline"></ion-icon>
+        </div>
+        <div *ngIf="loaded  && this.pictures.pictureList[curIndex].hasVotedDown">
+          <ion-icon class="hasVoted" id="voteDown" name="ios-arrow-down-outline"></ion-icon>
+        </div>
+        <div *ngIf="picScore<=19 && picScore>=-6" id="scoreT">{{this.pictures.pictureList[curIndex].score}}</div>
+        <div *ngIf="picScore>19" id="scoreT">
+          <img src="assets/img/goggles_high.png" />
+        </div>
+        <div *ngIf="picScore<-6" id="scoreT">
+          <img src="assets/img/poop.png" />
+        </div>
+        <div *ngIf="loaded  && !this.pictures.pictureList[curIndex].hasVotedUp">
+          <ion-icon (click)="votePicture('up')" id="voteUp" name="ios-arrow-up-outline"></ion-icon>
+        </div>
+        <!--   <ion-icon (click)="showPrompt()" name="ios-trash" id="trashCan"></ion-icon> -->
+        <div *ngIf="loaded  && this.pictures.pictureList[curIndex].hasVotedUp">
+          <ion-icon class="hasVoted" id="voteUp" name="ios-arrow-up-outline"></ion-icon>
+        </div>
+        <!--  <ion-icon (click)="showPrompt()" name="ios-trash" id="trashCan"></ion-icon> -->
+        <!--    </div> -->
+
+        <!--  <div *ngIf="picScore<=19 && picScore>=-6" id="scoreT">{{picScore}}</div>
+      <div *ngIf="picScore>19" id="scoreT">
+        <img src="assets/img/goggles_high.png" />
+      </div>
+      <div *ngIf="picScore<-6" id="scoreT">
+        <img src="assets/img/poop.png" />
+      </div> -->
+      </div>
+    </div>
+
+   
+
+    <ion-list id="botPadding">
+      <ion-item  text-wrap *ngFor="let comment of this.pictures.pictureList[curIndex].comments; let commentIndex = index" class="commentbox">
+          <div *ngIf="comment.ActivityStatus==null">
+              <img id="commentPosterAvatar" src="assets/avatars_round/Guide.png"> 
+             </div> 
+             <div *ngIf="comment.ActivityStatus!=null">
+               <img id="commentPosterAvatar" src="assets/avatars_round/{{comment.ActivityStatus}}"> 
+             </div> 
+        <!-- .slice().reverse() kääntävät listan päinvsataiseen järjestykseen => uusin ensin  -->
+        <div id="commentIcons">
+          
+          <div *ngIf="!comment.hasVotedUp">
+            <ion-icon id="voteUp" (click)="voteComment('up', comment._id, commentIndex)" id="voteIconUp" name="ios-arrow-up-outline"></ion-icon>
+          </div>
+          <div *ngIf="comment.hasVotedUp">
+            <ion-icon id="voteUp" class="hasVoted" id="voteIconUp" name="ios-arrow-up-outline"></ion-icon>
+          </div>
+
+          <div *ngIf="comment.score<=99 && comment.score>=-9" id="score">{{comment.score}}</div>
+          <div *ngIf="comment.score>99" id="score">
+            <img src="assets/Gems/Gems/Diamond-5.png" />
+          </div>
+          <div *ngIf="comment.score<-9" id="score">
+            <img src="assets/img/poop.png" />
+          </div>
+          
+          <div *ngIf="!comment.hasVotedDown">
+            <ion-icon id="voteDown" (click)="voteComment('down', comment._id, commentIndex)" id="voteIconDown" name="ios-arrow-down-outline"></ion-icon>
+          </div>
+          <div *ngIf="comment.hasVotedDown">
+            <ion-icon id="voteDown" class="hasVoted" id="voteIconDown" name="ios-arrow-down-outline"></ion-icon>
+          </div>
+
+        </div>
+
+        <div id="comment">
+          <div *ngIf="comment.comment.length > 130" id="commentChild">
+            {{comment.comment}}
+          </div>
+          <div *ngIf="comment.comment.length <= 130" id="commentChild">
+            {{comment.comment}}
+          </div>
+        </div>
+       
+      </ion-item>
+    </ion-list>
+  </div>
+  <ion-card no-border no-shadow id="paddingCard"></ion-card>
+</ion-content>
+
+<ion-footer keyboard-attach class="commentFooter">
+  <label class="textBoxOutline">
+    <textarea class="textBox" id="text-area-id" type="text" rows="1" [(ngModel)]="sendComment" placeholder="Write something nice"
+      value="placeHolder" on-return="popComment()"></textarea>
+    <!-- <input class="textBox" type="text" [(ngModel)]="sendComment" placeholder="Type your message" on-return="popComment()" /> -->
+  </label>
+  <ion-icon class="arrow" name="ios-arrow-forward-outline" (click)="popComment()"></ion-icon>
+</ion-footer>
+
+<!--
+<div class="comment">
+  <ion-item [(ngModel)]="sendComment" id="commentbox">
+    <ion-textarea rows="5" placeholder="Write something awesome!" maxLength="500"></ion-textarea>
+  </ion-item>
+
+  <button id="commentBut" (click)="popComment();" ion-button color="stable" block>
+    Comment
+  </button>
+</div> -->
+
+<!-- KOMMENTTINAPPI
+<div id="comButParent">
+  <ion-icon id="comment-button" name="md-create" (click)="presentCommentForm()"></ion-icon>
+</div> -->
+
+<!--button (click)=" presentCommentForm()" id="comment-button" ion-button color="stable" block>
+    Write comment
+  </button-->
+<!--div class="bottomNav">
+  <ion-icon class="bNavIcon" name="images" (click)="pushPage('feedi')"></ion-icon>
+  <ion-icon class="bNavIcon" name="camera" (click)="pushPage('camera')"></ion-icon>
+  <ion-icon class="bNavIcon" name="person" (click)="pushPage('me')"></ion-icon>
+</div-->

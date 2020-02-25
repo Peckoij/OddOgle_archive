@@ -1,0 +1,21 @@
+  ion-title {
+    text-align: center;
+  }
+
+
+  #takePicButton {
+    position: fixed;
+    bottom: 80px;
+   // border-radius: 50%;
+    width: 80px;
+    opacity: 0.8;
+   // height: 80px;
+    left: calc(50% - 40px);
+    background-color: transparent;
+  }
+
+
+  #pushPicButton {
+    position: fixed;
+    bottom: 120px;
+  }

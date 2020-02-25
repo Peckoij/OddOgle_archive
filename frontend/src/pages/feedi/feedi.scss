@@ -1,0 +1,224 @@
+page-feedi {
+  ion-content {
+    margin-bottom: 60px;
+    background-color: #F6EBF5;
+  }
+  ion-card {
+    position: relative; //text-align: left;
+    cursor: pointer;
+    margin: 0px;
+  }
+  ion-title {
+    text-align: center;
+  }
+  #paddingBot {
+    margin-bottom: 200px;
+    width: 100%;
+  }
+
+  .bottomNav {
+    height: 56px;
+  }
+
+  #navicon {
+    position: relative;
+    left: 0.2em;
+    font-size: 2.5em;
+    color: #F6EBF5;
+  } // GRID 
+  /*
+  .card-bg-container:nth-child(4n+1) {
+    position: relative;
+    height: 27%;
+    overflow: hidden;
+    width: 48%; 
+    margin: auto;
+    margin-top: 1.5%;
+    margin-left: 1%;
+    border-radius: 0px;
+    background-color: #6A539F;
+    color: #F6EBF5;
+    float:left;
+  }
+  .card-bg-container:nth-child(4n+2)  {
+    position: relative;
+    height: 27%;
+    overflow: hidden; 
+    width: 48%;
+    margin: auto;
+    margin-top: 1.5%;
+    margin-right: 1%;
+    border-radius: 0px;
+    background-color: #e7d5db;
+    color: #6A539F;
+    float: right;
+  }
+  .card-bg-container:nth-child(4n+3)  {
+    position: relative;
+    height: 27%;
+    overflow: hidden; 
+    width: 48%;
+    margin: auto;
+    margin-top: 1.5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 0px;
+    background-color: #6A539F;
+    color: #F6EBF5;
+    float: right;
+  }
+  
+  .card-bg-container:nth-child(4n+4) {
+    position: relative;
+    height: 27%;
+    overflow: hidden;
+    width: 48%; 
+    margin: auto;
+    margin-top: 1.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 0px;
+    background-color: #e7d5db;
+    color: #6a539f;
+    float:left;
+  }
+   */
+  .card-bg-container {
+    position: relative;
+    overflow: hidden;
+    height: 35%;
+    margin: auto;
+    margin-top: 3%;
+    /*
+    margin-left: 1%;
+    margin-right: 1%;*/
+    //background-color: #3c2a70;
+    color: #F6EBF5;
+  }
+  .picShadow {
+    position: relative;
+    filter: blur(2px); //blur
+    //   transform: scale(1.01); // poistaa blurrin aiheuttamat valkoiset reunukset
+  }
+  .card-title-block {
+    position: absolute;
+    //font-size: 2em;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    height: 3.5em;
+    //padding: 1.5% 0 1.5% 0;
+    //background-color: inherit;
+    background: linear-gradient(#6A539F, #3c2a70 /*#E7D5DB*/);
+    //font-family: magnetoBold; 
+    // font-family: rocksalt; 
+    // font-family: WalterTurncoat;
+    //  font-family: shareTechMono; 
+    // font-family: iceland;
+  }
+  .card-title {
+    position: relative;
+    //left: 2%;
+    padding-left: 2%;
+    font-family: FredokaOne;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    white-space: nowrap;
+    top: 0.25em;
+    font-size: 2em;
+   // width: 70%;
+  }
+  #score {
+    position: relative;
+    float: right;
+    z-index: 100%;
+    top: -0.2em;
+    right: 0.2em;
+    //border: 2.5px solid #F6EBF5;
+    //border-radius: 15%;
+    text-align: right;
+    //width: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.2em;
+    //padding: 0.32em 0.25em 0.2305em 0.35em;
+   
+  } 
+
+  #scoreNumber {
+    color: #F6EBF5;
+    font-size: 1em;
+    font-family: FredokaOne; 
+
+   // padding-top: 0.1em;
+   // padding-bottom: 0.1em;
+  }
+  /*
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  } 
+  
+  .card-titleTop{
+    position: absolute;
+    font-size: 2.4em;
+    background-color: inherit;
+    top:0;
+    opacity: .5;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+  } */
+  .buttonBox {
+    //    z-index: 99;
+    background-color: inherit;
+  }
+  #pic {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .loadMorePic {
+    position: relative; // padding: 8% 2% 25% 2%;
+    width: 22%;
+    display: block;
+    transform-origin: 50% 50%;
+    left: 0;
+    right: 0;
+    margin: auto; // animation:spin 6s linear infinite;
+    // float:left;
+    //  position: relative;
+  }
+  #spinCW {
+    animation: spin 6s linear infinite;
+  }
+  #loadPicCard {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    height: 30%;
+    padding-top: 6%;
+  }
+  #paddingCard {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    height: 30%;
+    padding-top: 6%;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

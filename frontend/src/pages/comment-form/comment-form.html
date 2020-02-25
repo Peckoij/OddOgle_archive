@@ -1,0 +1,24 @@
+<ion-content class="popover" >
+    <ion-navbar>
+        <ion-title>Comment</ion-title>
+      </ion-navbar>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.comment">
+      <div class="error-message" *ngIf="commentForm.get('comment').hasError(validation.type) && (commentForm.get('comment').dirty || commentForm.get('comment').touched)">
+        {{validation.message}}
+      </div>
+    </ng-container>
+  </div>
+
+  <form [formGroup]="commentForm" (ngSubmit)="logForm()">
+    <!-- comment input -->
+    <ion-item>
+      <ion-label floating>Your awesome comment goes there</ion-label>
+      <ion-textarea type="text" rows=5 formControlName="comment" ></ion-textarea>
+    </ion-item>
+    <button class="float_right" ion-button type="submit" [disabled]="!commentForm.valid">Comment</button>
+  </form>
+  <button ion-button (click)="popView()" class="float_left">Back</button>
+
+
+</ion-content>

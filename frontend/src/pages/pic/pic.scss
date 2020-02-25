@@ -1,0 +1,382 @@
+page-pic {
+  .pagecontent {
+    padding-bottom: 80px;
+    background-color: #F6EBF5;
+  }
+
+
+  /*
+   .item:nth-of-type(even) {
+    // border-bottom: 10px;
+    // border-color: #3c2a70;
+    background-color: #F6EBF5;
+    color: #242424;
+    margin: 1% 0%;
+    overflow: initial;
+    white-space: initial;
+  } 
+  
+  .item:nth-of-type(odd) {
+    // border-bottom: 10px;
+    // border-color: #3c2a70;
+    background-color: #e7d5db;
+    color: #242424;
+    margin: 1% 0%;
+    overflow: initial;
+    white-space: initial;
+  } */
+  .list-md .item-block .item-inner {
+    border-bottom: 0px;
+  }
+
+  .alert-wrapper {
+    width: 100%;
+  }
+
+  .reportButton {
+    position: relative;
+    float: right;
+    bottom: 7.8em;
+    margin-right: 0.1em;
+    color: #ffffff;
+    font-size: 3em;
+    opacity: .5;
+    //font-weight: bold;
+  }
+
+  .hasVoted {
+    opacity: .5;
+    z-index: 1000;
+  }
+  #floatR {
+    float: right;
+    font-size: 1.5em;
+    color: #3c2a70;
+    top: -0.2em;
+    position: relative;
+    font-weight: bold;
+  }
+
+  .headeri {
+    color: #3c2a70;
+    font-weight: bold;
+    font-family: FredokaOne;
+    margin-top: 1.75em;
+    padding-bottom: 1em;
+    //border-bottom: #6A539F 1px solid;
+   // border: 1px solid red;
+  }
+
+  #picPosterAvatar {
+    height: 14%;
+    width: 14%;
+    position: relative;
+    float: left;
+    bottom: 0.85em;
+    padding-right: 0.5em;
+  }
+
+  #title {
+    color: #3c2a70;
+    font-weight: bold;
+    font-family: FredokaOne;
+    font-size: 150%;
+    position: relative;
+    bottom: 0.20em;
+    margin-left: 3em;
+  }
+
+  #picVoteIcons{
+    height: 1em;
+    //width: 3.5em;
+  }
+
+  #voteUp {
+    color: #00b27f;
+    font-weight: bold;
+    overflow: visible;
+    float: right;
+    font-size: 2em;
+    position: relative;
+    font-weight: bold;
+   // top: -0.2em;
+    bottom: 0.85em;
+    //margin-right: 0.1em;
+    font-size: 300%;
+  }
+  #voteDown {
+    color: #ff4c19;
+    font-weight: bold;
+    overflow: visible;
+    float: right;
+    font-size: 2em;
+    position: relative;
+    font-weight: bold;
+   // top: -0.2em;
+    bottom: 0.85em;
+    //margin-left: 0.1em;
+    font-size: 300%;
+  }
+  #trashCan{
+   // position: static;
+    color: #3c2a70;
+   // font-weight: bold;
+    //overflow: visible;
+  }
+
+  #scoreT {
+    position: relative;
+    float: right;
+    //top: -0.2em;
+    //right: 0.5em;
+    bottom: 1.45em;
+    //border: 0.15em solid #3c2a70;
+    //border-radius: 15%;
+    text-align: center;
+    width: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.2em 0em 0.2em 0em;
+    //padding-top: 0.2em;
+    //padding-bottom: 0.2em;
+    color: #3c2a70;
+    font-family: FredokaOne;
+    font-size: 200%;
+  }
+
+  //Comments styles
+
+  .item {
+   //background-color: rgb(224, 119, 215);
+    color: #242424;
+    padding-bottom: 1em;
+    border-bottom: #6A539F 1px;
+    border-style: solid;
+    //margin: 1% 0%;
+    //overflow: initial;
+    //white-space: initial;
+  }
+// rgb(213, 204, 233);
+  #botPadding {
+   // padding-bottom: 60px;
+    background-color: rgb(231, 224, 246);
+    margin-top: 0.5em;
+   // margin-top: 5em;
+  }
+
+  .commentbox {
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: rgb(231, 224, 246);
+    //height: 10em;
+    
+  }
+
+  /*
+  #comment {
+    //   padding: 1em 7% 1em 0;
+       padding-right: 13%;
+       min-height: 7em;
+       position: relative;
+       display: flex;
+       justify-content: center;
+      flex-direction: column;
+       //align-items: center;
+    //   overflow: scroll;
+     } 
+     #commentChildStart {
+       flex-wrap: wrap;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: flex-start;
+      // height: 120px;
+       overflow: auto;
+     
+     }
+     #commentChildCenter {
+       flex-wrap: wrap;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       height: 120px;
+       align-items: flex-start;
+       overflow: auto;
+     }
+      */
+
+    #commentChild {
+      margin-top: 4em;
+    }
+     
+
+    #score {
+      position: relative;
+      
+    //  right: 2em;
+      //border: 0.2em solid;
+      //border-radius: 15%;
+      text-align: center;
+     // width: 36px;
+     // height: 36px;
+      //padding: 0.3em 0.2em 0.2em .2em;
+     // padding-top: 0.4em;
+      font-weight: bold;
+      color: #3c2a70;
+      font-family: FredokaOne;
+      font-size: 150%;
+      float: right;
+      right: 2em;
+      top: 0.1em;
+      //bottom: 0.1em;
+    } 
+    
+    #commentIcons {
+      color: #3c2a70;
+    }
+
+    #commentPosterAvatar {
+      height: 14%;
+      width: 14%;
+      position: relative;
+      //left:-1em;
+      float: left;
+      //bottom: 0.85em;
+      margin-top: 0.2em;
+      left: 1em;
+      padding-right: 0.5em;
+    }
+
+  //Comment vote buttons styles
+  #voteIconUp {
+    color: #00b27f;
+    font-weight: bold;
+    overflow: visible;
+    float: right;
+   // font-size: 2em;
+    position: relative;
+    top: 0.2em;
+    //margin-right: 0.1em;
+    font-size: 200%;
+    float: right;
+    right: 3em;
+  }
+
+  /*
+    #voteIconUp {
+      position: absolute;
+      right: 0.3em;
+      top: 2.8em;
+      padding-right: 0.22em;
+      font-size: 2em; 
+      color: #00b27f;
+      font-weight: bold;
+    } */
+    #voteIconDown {
+      color: #ff4c19;
+      font-weight: bold;
+      overflow: visible;
+     // float: right;
+      //font-size: 2em;
+      position: relative;
+      top: 0.2em;
+      //margin-left: 0.1em;
+      font-size: 200%;
+      float: right;
+      //right: -0.5em;
+    }
+    /*
+    #voteIconDown {
+      position: absolute;
+      top: 3.9em;
+      right: 0.3em;
+      padding-right: 0.22em;
+      font-size: 2em;
+      color: #ff4c19;
+      font-weight: bold;
+    } */
+
+    .commentFooter {
+      background: linear-gradient(#6A539F, #3c2a70);
+      height: 56px; 
+    }
+
+    .textBox {
+      height: 2em;
+      width: 80%;
+      margin: 0.3em 0.8em 0em 0em;
+      border-radius: 10px;
+      border-color: transparent;
+      font-size: 150%;
+    }
+
+    .textBox:focus {
+      //height: 4em;
+    }
+  
+    .textBoxOutline {
+      border-radius: 15%;
+      padding: 1em;
+    }
+
+    .arrow {
+      position: relative;
+      color: #F6EBF5;
+      font-size: 3em;
+      bottom: 0.12em;
+      right: 0.35em;
+    }
+
+    #paddingCard {
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      height: 10%;
+      padding-top: 6%;
+    }
+
+    #paddingCardTop {
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      height: 7%;
+      padding-top: 6%;
+    }
+/*
+    .comment {
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
+      display: block;
+      left: 0;
+      right: 0;
+      margin: auto;
+    } 
+
+    #commentbox {
+     // position: sticky;
+      background-color: red; 
+      padding: 0;
+      bottom: 0;
+     // z-index: 100;
+    } */
+/*
+    #comment-button {
+      position: fixed;
+      display: block;
+      z-index: 1000;
+      bottom: 2%;
+      //left: calc(50% - .25em);
+      font-size: 2.5em;
+      color: #3c2a70;
+      border: 2.5px solid #3c2a70;
+      margin: auto;
+      left:0;
+      right:0;
+      background-color: #F6EBF5;
+      border-radius: 100%;
+      //padding: 0.32em 0.35em 0.2305em 0.25em;
+      padding: .2em .3em;
+      width: 1.5em;
+    } */
+  }

@@ -1,0 +1,94 @@
+
+<ion-header>
+  <ion-navbar>
+    <div menu-toggle="menu" (click)="openMenu()">
+      <ion-icon id="navicon" name="md-menu"></ion-icon>
+    </div>
+    <img id="logoTopNav" src="assets/img/Logo-2.png" (click)='user.toggleNotificationType("newFollowed",true)' />
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="paddingBot">
+  <div *ngIf="pictureService.feedType==='default'">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  </div>
+
+  <ion-card *ngFor="let picture of pictureService.pictureList" class="card-bg-container">
+    <div (click)='openPicPage(picture);' class="buttonBox">
+      <!--div class="card-titleTop"> </div-->
+      <div class="card-title-block">
+        <div class="card-title">{{picture.title}}
+          <div id="score">
+            <p id="scoreNumber">{{picture.score}}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img id="pic" src="{{picture.name}}" />
+      </div>
+    </div>
+  </ion-card>
+  <div *ngIf="pictureService.feedType==='default'">
+  <ion-card no-border no-shadow id="loadPicCard" ng-class="divClass" (click)="pictureService.extendPictures()">
+    <img *ngIf="!pictureService.loading" class="loadMorePic" src="assets/img/keep_ogling_icon.png" />
+    <img *ngIf="pictureService.loading" id="spinCW" class="loadMorePic" src="assets/img/keep_ogling_icon.png" />
+  </ion-card>
+</div>
+<ion-card no-border no-shadow id="paddingCard"></ion-card>
+</ion-content>
+<div class="bottomNav">
+  <ion-icon class="bNavIcon" name="images" (click)="pushPage('feedi')"></ion-icon>
+  <ion-icon class="bNavIcon" name="camera" (click)="pushPage('camera')"></ion-icon>
+  <ion-icon class="bNavIcon" name="person" (click)="pushPage('me')"></ion-icon>
+</div>
+
+
+<ion-nav #mainContent></ion-nav>
+<ion-menu id="menu" type="overlay"[content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list radio-group [(ngModel)]="type" class="menulist">
+      <ion-item class="menuitem" on-tap="reloadFeed('default');">
+        <ion-label>
+            Newest posts
+        </ion-label>
+        <ion-radio value="default"></ion-radio>
+      </ion-item> 
+      <ion-item class="menuitem" on-tap="reloadFeed('best');"> 
+        <ion-label>
+            Most loved posts
+        </ion-label>
+        <ion-radio value="best"></ion-radio>
+      </ion-item>
+      <ion-item class="menuitem" on-tap="reloadFeed('poop');">
+        <ion-label>
+            Most hated posts
+        </ion-label>
+        <ion-radio value="poop"></ion-radio> 
+      </ion-item>  
+      <ion-item *ngIf="user.localUser.data.userID != 'Guest'" class="menuitem" on-tap="reloadFeed('myPics');">
+        <ion-label>
+          myPics
+        </ion-label>
+        <ion-radio value="myPics"></ion-radio> 
+      </ion-item>  
+      <ion-item *ngIf="user.localUser.data.userID != 'Guest'" class="menuitem" on-tap="reloadFeed('followedPics');">
+        <ion-label>
+          followedPics
+        </ion-label>
+        <ion-radio value="followedPics"></ion-radio> 
+      </ion-item> 
+     <!-- <button id="nappula" (click)="reloadFeed();">Reload</button>   -->
+     <button *ngIf="user.localUser.data.userID != 'Guest'" id="nappulaLogout" (click)="user.enableNotifications();">Enable Notifications</button> 
+      <button *ngIf="user.localUser.data.userID != 'Guest'" id="nappulaLogout" (click)="logout();">Logout</button> 
+      <button *ngIf="user.localUser.data.userID == 'Guest'" id="nappulaLogout" (click)="login();">Login</button> 
+    </ion-list>
+  </ion-content>
+</ion-menu>
